@@ -2,10 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
-  nitro:{
-    preset: 'node-server'
-  },
-  routeRules: {
-      '/': { prerender: true },
+  ssr: false,
+  nitro: {
+    preset: 'service-worker'
   }
 })
